@@ -32,7 +32,7 @@ TLDNode *tldnode_create(char *tldname) {
     if (node == NULL) {
         return NULL; //failed to allocate
     }
-    node->tldname = _strdup(tldname);
+    node->tldname = strdup(tldname);
     if (node->tldname == NULL) {
         free(node);
         return NULL; //failed to allocate
